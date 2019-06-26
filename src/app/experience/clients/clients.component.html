@@ -1,0 +1,16 @@
+<div #clients>
+  <h3>Employers</h3>
+  <ul class="tab">
+    <li appHighlight *ngFor="let emp of clients">
+      {{ emp }}
+    </li>
+  </ul>
+</div>
+<div #roles>
+  <h3>Roles</h3>
+  <ul class="tab">
+    <li appHighlight *ngFor="let role of roles">
+      {{ role }}
+    </li>
+  </ul>
+</div>

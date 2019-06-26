@@ -1,0 +1,74 @@
+<div class="tab">
+  <div>
+    <input type="checkbox" value="tech" (click)="selcted='tech'">Technologies <br />
+    <input type="checkbox" value="lang" (click)="selcted='lang'">Languages <br />
+    <input type="checkbox" value="db" (click)="selcted='db'">Databases <br />
+    <input type="checkbox" value="emp" (click)="selcted='emp'">Employers <br />
+    <input type="checkbox" value="ind" (click)="selcted='ind'">Industries
+  </div>
+  <div [ngSwitch]="selcted">
+      <app-technologies *ngSwitchCase="'tech'"></app-technologies>
+      <app-languages *ngSwitchCase="'lang'"></app-languages>
+      <app-databases *ngSwitchCase="'db'"></app-databases>
+      <app-clients *ngSwitchCase="'emp'"></app-clients>
+      <app-industries *ngSwitchCase="'ind'"></app-industries>
+  </div>
+</div>  
+  <!-- <h3>Professional Skills</h3> 
+  <h5>Technical Experience</h5>
+  <ul>
+    <li appHighlight *ngFor="let skill of skillset" (click)="showme($event)">
+      {{ skill }}
+    </li>
+  </ul>
+  <p>{{ selcted }}</p>
+</div>
+<div class="sidenav">
+  <div class="subnav sidenav">
+    <button class="subnavbtn">Technologies <i class="fa fa-caret-right"></i></button>
+    <div class="subnav-content">
+      <a href="#db">Databases</a>
+      <a href="#code">Languages</a>
+      <a href="#int">Integration</a>
+    </div>
+  </div> 
+  <div class="subnav sidenav">
+    <button class="subnavbtn">Roles <i class="fa fa-caret-right"></i></button>
+    <div class="subnav-content">
+      <a href="#arch">Architect</a>
+      <a href="#dev">Developer</a>
+      <a href="#sup">Support</a>
+      <a href="#adm">Admin</a>
+    </div>
+  </div> 
+  <div class="subnav sidenav">
+    <button class="subnavbtn">Industries <i class="fa fa-caret-right"></i></button>
+    <div class="subnav-content">
+      <a href="#pharma">Pharma</a>
+      <a href="#fin">Finance</a>
+      <a href="#edu">Education</a>
+      <a href="#gam">Gaming</a>
+      <a href="#ins">Insurance</a>
+      <a href="#cpg">Retail</a>
+      <a href="#def">Defense</a>
+    </div>
+  </div>
+  <div class="subnav sidenav">
+    <button class="subnavbtn">Employers <i class="fa fa-caret-right"></i></button>
+    <div class="subnav-content">
+      <a href="#iss">ISS</a>
+      <a href="#rdc">RDC</a>
+      <a href="#penn">Penn</a>
+      <a href="#lgt">Lightning Poker</a>
+      <a href="#cigna">Cigna</a>
+      <a href="#chariot">Chariot</a>
+      <a href="#tp">Towers Perrin</a>
+      <a href="#sci">SciQuest</a>
+      <a href="#covance">Covance</a>
+      <a href="#st">ST</a>
+      <a href="#utc">UTC</a>
+      <a href="#icc">ICC</a>
+    </div>
+  </div>
+</div>
+-->
