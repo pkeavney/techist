@@ -14,6 +14,7 @@ import { SystemsComponent } from './experience/clients/systems/systems.component
 import { ChronologyComponent } from './experience/chronology/chronology.component';
 import { ShowDirective } from './show.directive';
 import { HideDirective } from './hide.directive';
+import { TimelineComponent } from './experience/timeline/timeline.component';
 // import { MenuComponent } from './menu/menu.component';
 // import { FetchService } from './fetch.service';
 
@@ -31,7 +32,8 @@ import { HideDirective } from './hide.directive';
     SystemsComponent,
     ChronologyComponent,
     ShowDirective,
-    HideDirective
+    HideDirective,
+    TimelineComponent
     // MenuComponent,
     // FetchService
   ],

@@ -25,7 +25,7 @@
         <!-- <b>Software Developer</b> -->
       <p>Designed and implemented Metridoc http://code.google.com/p/metridoc integration procedures to consolidate data from multiple sources into a RDMS for statistical analysis. </p>
       <p>Coding entailed writing Java and Groovy POJOs and POGOs, integrating Apache Camel and POI libraries to read, parse and ingest data from, and pipe data to Oracle, SQL Server, XML, spreadsheets and various delimited file types. </p>
-      <p>Designed, built and maintained MySql databases to persist library-specific data; creating normalization procedures in SQL to optimize storage and enhance accessibility. </p>
+      <p *ngIf="dbState">Designed, built and maintained MySql databases to persist library-specific data; creating normalization procedures in SQL to optimize storage and enhance accessibility. </p>
       <p>Created ER and UML diagrams to expose system architecture to other academic institutions. </p>
       <p>Maintained LiquiBase files for database change management and used Jenkins to schedule, manage and log integration processes.</p>
     </div>
@@ -38,8 +38,13 @@
       <p> July 2006 &ndash; January 2010</p>
       <p>Designed and developed components for an electronic gaming table using Java and PL/SQL running on a Linux platform. </p>
       <p>Assumed data architect role after redesigning the data layer which involved merging and normalizing two existing Postgres v8x databases and retooling data accessors from JDBC to an XML-based approach resulting in less code, easier maintenance and greater flexibility. </p>
-      <p>Created a scheduling module comprised of stored procedures on the back-end with a PHP user interface. </p>
-      <p>Additional duties involved redesigning Swing-based user interfaces, writing Bash shell scripts, integrating hardware data capture, enhancing encryption using Jasypt, creating reports in PHP, writing and executing unit tests and system test plans as well as user and tech manual documentation. </p>
+      <p *ngIf="dbState">Created a scheduling module comprised of Postgres stored procedures on the back-end with a PHP user interface. </p>
+      <p>Developed Swing-based GUI</p>
+      <p>Developed Bash shell scripts</p>
+      <p>Added password security with Jasypt</p>
+      <p>Created PHP reports</p>
+      <p>Maintained tech manual documentation</p>
+      <p>Created functional test plans</p>
       <p>Served as primary contact for gaming certification bodies GLI and NJ-DGE.</p>
     </div>
   </div>
@@ -52,7 +57,7 @@
       <p>Initially contracted as a Java developer to help migrate code base from Java v1.3 to 1.5 and construct a unit test framework for DM-ICMS, a multi-tiered application comprised of a Swing-based client interfacing to a thin server backed by an Oracle database. </p>
       <p>Assumed team/tech lead responsibilities, managing the day-to-day interaction between the Business Unit, Quality Assurance, software development and production support teams. </p>
       <p>Technical responsibilities included, but not limited to, problem analysis, troubleshooting, bug fixes, code reviews, JRun server installation, configuration, deployment and technical support. </p>
-      <p>Accomplishments included the data migration of all case management systems from Oracle 8i to 10g and the conversion of the build process from DOS batch files to Ant scripts. </p>
+      <p *ngIf="dbState">Accomplishments included the data migration of all case management systems from Oracle 8i to 10g and the conversion of the build process from DOS batch files to Ant scripts. </p>
     </div>
   </div>
   <div class="w3-container">
@@ -61,9 +66,13 @@
     <div class="panel" id="chariot">
       Fort Washington, PA
       <p> March 2004 &ndash; September 2005</p>
-      <p>Primarily developed and maintained EJB's, Swing components, POJOs, JSPs, Sybase triggers and stored procedures for a multi-tiered inventory tracking and distribution system. </p>
-      <p>Integrated error notification using JMS. Wrote technical specifications and requirement analysis documents. Developed Jasper reports, Jython unit test scripts and automated code generation using Middlegen and Xdoclet. </p>
-      <p>Briefly maintained Struts-based web application for non-profit organization which involved creating and modifying action form bean classes, Hibernate queries and mappings to Postgres back-end  as well as MySQL setup and configuration for secure login.</p>
+      <p>Developed and EJB's, Swing components, POJOs, JSPs, Sybase triggers and stored procedures for Mattingly's inventory tracking and distribution system. </p>
+      <p *ngIf="dbState">Developed Sybase triggers and stored procedures. </p>
+      <p>Added JMS pub-sub error notification. </p>
+      <p>Wrote technical specifications and requirement analysis documents. </p>
+      <p>Developed Jasper reports. </p>
+      <p>Developed Jython unit test scripts. </p>
+      <p>Integrated Middlegen and Xdoclet into build process to automate code generation. </p>
     </div>
   </div>
   <div class="w3-container">
@@ -72,7 +81,10 @@
     <div class="panel" id="tp">
       Philadelphia, PA
       <b> September 2003 &ndash; November 2003</b>
-      <p>Managed IIS deployments on WebLogic v7x/8x servers. Additional responsibilities included updating SQL server databases, troubleshooting server problems and documenting code migration procedures.</p>
+      <p>Managed IIS deployments on WebLogic v7x/8x servers. </p>
+      <p>Identified and troubleshot server problems. </p>
+      <p>Created code migration procedures. </p>
+      <p *ngIf="dbState">Performed SQL server database updates. </p>
     </div>
   </div>
   <div class="w3-container">

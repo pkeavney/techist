@@ -1,5 +1,3 @@
 export class Technology {
-    constructor(
-        public id: number,
-        public name: string) { }
+    constructor(id: number, name: string, type: string) { }
 }

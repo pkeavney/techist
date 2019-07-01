@@ -7,23 +7,15 @@
     </div>
     <div w3-container>
         &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="tech" (click)="techview='tech'"> Technologies <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="lang" (click)="techview='lang'">&nbsp;&nbsp;Languages <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<input #cod type="checkbox" (click)="techview='lang'">&nbsp;&nbsp;Languages <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<input #db type="checkbox" (click)="techview='db'">&nbsp;&nbsp;Databases <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<input #emp type="checkbox" (click)="techview='emp'">&nbsp;&nbsp;Employers <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<input #ind type="checkbox" (click)="techview='ind'">&nbsp;&nbsp;Industries <br />
     </div>
-    <!-- <ng-container *ngIf="ind.checked"><app-industries></app-industries></ng-container>
-    <ng-container *ngIf="!ind.checked">Unchecked</ng-container> -->
 </nav>
 <div class="w3-main" style="margin-left:300px">
-        <ng-container *ngIf="ind.checked"><app-industries></app-industries></ng-container>
-        <ng-container *ngIf="emp.checked"><app-chronology></app-chronology></ng-container>
-    <!--        <ng-container *ngIf="ind.checked"><app-industries/></ng-container>
-         <div [ngSwitch]="techview">
-        <app-technologies *ngSwitchCase="'tech'"></app-technologies>
-        <app-languages *ngSwitchCase="'lang'"></app-languages>
-        <app-databases *ngSwitchCase="'db'"></app-databases>
-        <app-industries *ngSwitchCase="'ind'"></app-industries>
-        <app-chronology *ngSwitchDefault></app-chronology>
-    </div> -->
+    <ng-container *ngIf="cod.checked"><app-timeline></app-timeline></ng-container>
+    <ng-container *ngIf="ind.checked"><app-industries></app-industries></ng-container>
+    <ng-container *ngIf="emp.checked"><app-chronology [dbState]="db.checked" [techview]="techview"></app-chronology></ng-container>
+    <ng-container *ngIf="db.checked"><app-databases></app-databases></ng-container>
 </div>

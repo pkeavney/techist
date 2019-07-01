@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-chronology',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chronology.component.css']
 })
 export class ChronologyComponent implements OnInit {
+  
+  @Input() dbState: boolean;
+  @Input() techview: string;
 
   constructor() { }
 

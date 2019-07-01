@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Pete Keavney';
   techview = '';
+  dbState = this.techview==="db";
 }
