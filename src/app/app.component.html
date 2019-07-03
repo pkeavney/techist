@@ -7,6 +7,7 @@
     </div>
     <div w3-container>
         &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="tech" (click)="techview='tech'"> Technologies <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;<input #bi type="checkbox" (click)="techview='bi'">&nbsp;&nbsp;Languages <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<input #cod type="checkbox" (click)="techview='lang'">&nbsp;&nbsp;Languages <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<input #db type="checkbox" (click)="techview='db'">&nbsp;&nbsp;Databases <br />
         &nbsp;&nbsp;&nbsp;&nbsp;<input #emp type="checkbox" (click)="techview='emp'">&nbsp;&nbsp;Employers <br />
@@ -14,7 +15,7 @@
     </div>
 </nav>
 <div class="w3-main" style="margin-left:300px">
-    <ng-container *ngIf="cod.checked"><app-timeline></app-timeline></ng-container>
+    <app-timeline [busInt]="bi.checked" [dbState]="db.checked" [coding]="cod.checked"></app-timeline>
     <ng-container *ngIf="ind.checked"><app-industries></app-industries></ng-container>
     <ng-container *ngIf="emp.checked"><app-chronology [dbState]="db.checked" [techview]="techview"></app-chronology></ng-container>
     <ng-container *ngIf="db.checked"><app-databases></app-databases></ng-container>

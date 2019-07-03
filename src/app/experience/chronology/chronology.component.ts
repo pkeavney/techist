@@ -7,7 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChronologyComponent implements OnInit {
   
+  @Input() busInt: boolean;
+  @Input() coding: boolean;
   @Input() dbState: boolean;
+  @Input() modling: boolean;
   @Input() techview: string;
 
   constructor() { }
