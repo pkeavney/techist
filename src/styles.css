@@ -1,23 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 .tab {
-    border: 1px solid rgb(10, 10, 10);
-    background-color: #f1f1f1;
-    width: 65%;
-    scroll-behavior: auto;
-  }
-  .tab ul ol {
-    list-style-type: none;
-    margin-top: 20px;
-    padding: 0;
-  }
-  .tab li {
-    display: block;
-    background-color: inherit;
-    color: black;
-    width: 100%;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-    font-size: 12px;
-  }
+  border: 1px solid rgb(10, 10, 10);
+  background-color: #f1f1f1;
+  width: 65%;
+  scroll-behavior: auto;
+}
+.tab ul ol {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+}
+.tab li {
+  display: block;
+  background-color: inherit;
+  color: black;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+p {
+  font-size: 12px;
+}
+
+ul ol {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+}

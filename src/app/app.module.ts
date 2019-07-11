@@ -15,6 +15,7 @@ import { ChronologyComponent } from './experience/chronology/chronology.componen
 import { ShowDirective } from './show.directive';
 import { HideDirective } from './hide.directive';
 import { TimelineComponent } from './experience/timeline/timeline.component';
+import { SkillsComponent } from './skills/skills.component';
 // import { MenuComponent } from './menu/menu.component';
 // import { FetchService } from './fetch.service';
 
@@ -33,7 +34,8 @@ import { TimelineComponent } from './experience/timeline/timeline.component';
     ChronologyComponent,
     ShowDirective,
     HideDirective,
-    TimelineComponent
+    TimelineComponent,
+    SkillsComponent
     // MenuComponent,
     // FetchService
   ],

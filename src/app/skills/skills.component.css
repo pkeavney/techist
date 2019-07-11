@@ -1,0 +1,29 @@
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: gray; /* Grey background */
+}
+
+.skills {
+  padding-top: 10px; /* Add top padding */
+  color: white; /* White text color */
+}
+
+.years {
+  margin-top: -15px; /* raise text vertically */
+  padding-bottom: 10px; /* Add bottom padding */
+  text-align: right; /* Right-align text */
+}
+  
+.pa {width: 94%; background-color: black;}
+.sd {width: 58%; background-color: black;}
+.dd {width: 33%; background-color: black;}
+.ad {width: 70%; background-color: black;}
+.sa {width: 12%; background-color: black;}
+.tp {width: 55%; background-color: black;}
+.di {width: 45%; background-color: black;}
+.dcc {width: 48%; background-color: black;}
+.icc {width: 58%; background-color: black;}

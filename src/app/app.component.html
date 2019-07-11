@@ -1,22 +1,103 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-    <div w3-container>
-        <app-contact-info></app-contact-info>
+<div class="header">
+    <app-contact-info></app-contact-info>
+</div>
+<div class="row">
+    <div class="left-side">
+        <input type="checkbox" value="tech" (click)="techview='tech'"> Technologies <br />
+        <input #bi type="checkbox" (click)="techview='bi'"> Integration <br />
+        <input #cod type="checkbox" (click)="techview='lang'"> Languages <br />
+        <input #db type="checkbox" (click)="techview='db'"> Databases <br />
+        <input #emp type="checkbox" (click)="techview='emp'"> Employers <br />
+        <input #ind type="checkbox" (click)="techview='ind'"> Industries <br />
+        <input #mod type="checkbox" (click)="techview='mod'"> Design <br />
+        <input #svc type="checkbox" (click)="techview='svc'"> Services <br />           
     </div>
-    <div w3-container>
-        &nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" value="tech" (click)="techview='tech'"> Technologies <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<input #bi type="checkbox" (click)="techview='bi'">&nbsp;&nbsp;Languages <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<input #cod type="checkbox" (click)="techview='lang'">&nbsp;&nbsp;Languages <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<input #db type="checkbox" (click)="techview='db'">&nbsp;&nbsp;Databases <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<input #emp type="checkbox" (click)="techview='emp'">&nbsp;&nbsp;Employers <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;<input #ind type="checkbox" (click)="techview='ind'">&nbsp;&nbsp;Industries <br />
+    <div class="center">
+        <app-timeline [busInt]="bi.checked" [coding]="cod.checked" [dbState]="db.checked" [modling]="mod.checked"></app-timeline>
+        <ng-container *ngIf="ind.checked"><app-industries></app-industries></ng-container>
+        <ng-container *ngIf="emp.checked"><app-chronology [dbState]="db.checked" [techview]="techview"></app-chronology></ng-container>
+        <ng-container *ngIf="db.checked"><app-databases></app-databases></ng-container>
+    </div>
+    <div class="right-side">
+      <ul>
+        <li><span class="caret">Tech Experience</span>
+          <ul class="nested">
+            <li>Analysis</li>
+            <li>Design</li>
+            <li><span class="caret">Development</span>
+              <ul class="nested">
+                <li><span class="caret">Language</span>
+                  <ul class="nested">
+                    <li>Groovy</li>
+                    <li>PL/SQL</li>
+                    <li>Java</li>
+                    <li>Javascript</li>
+                    <li>Python</li>
+                  </ul>
+                </li>
+                <li><span class="caret">Database</span>
+                  <ul class="nested">
+                    <li>Oracle</li>
+                    <li>SQLServer</li>
+                    <li>MySql</li>
+                    <li>Postgres</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>  
+          </ul>
+        </li>
+      </ul>
+    </div>
+</div>
+<!--
+<nav class="w3-sidebar w3-white w3-animate-left" style="z-index:3;width:225px;" id="sideNav"><br>
+    <div w3-container style="padding-left:30px">
+        <input type="checkbox" value="tech" (click)="techview='tech'"> Technologies <br />
+        <input #bi type="checkbox" (click)="techview='bi'"> Integration <br />
+        <input #cod type="checkbox" (click)="techview='lang'"> Languages <br />
+        <input #db type="checkbox" (click)="techview='db'"> Databases <br />
+        <input #emp type="checkbox" (click)="techview='emp'"> Employers <br />
+        <input #ind type="checkbox" (click)="techview='ind'"> Industries <br />
+        <input #mod type="checkbox" (click)="techview='mod'"> Design <br />
+        <input #svc type="checkbox" (click)="techview='svc'"> Services <br />
     </div>
 </nav>
-<div class="w3-main" style="margin-left:300px">
-    <app-timeline [busInt]="bi.checked" [dbState]="db.checked" [coding]="cod.checked"></app-timeline>
+<div w3-container style="margin-left:30px">
+    <app-timeline [busInt]="bi.checked" [coding]="cod.checked" [dbState]="db.checked" [modling]="mod.checked"></app-timeline>
     <ng-container *ngIf="ind.checked"><app-industries></app-industries></ng-container>
     <ng-container *ngIf="emp.checked"><app-chronology [dbState]="db.checked" [techview]="techview"></app-chronology></ng-container>
     <ng-container *ngIf="db.checked"><app-databases></app-databases></ng-container>
 </div>
+<div w3-container class="sideview w3-white w3-animate-right" style="width:200px;">
+        <app-skills></app-skills>
+</div>
+<div w3-container class="sideview w3-white w3-animate-right" style="width:200px;">
+    <ul id="viewSelect">
+        <li><span class="caret">Tech Experience</span>
+            <ul class="nested">
+                <li>Analysis</li>
+                <li>Design</li>
+                <li><span class="caret">Development</span>
+                    <ul class="nested">
+                        <li>Language</li>
+                        <li>Database</li>
+                        <li><span class="caret">Database</span>
+                            <ul class="nested">
+                                <li>Oracle</li>
+                                <li>SQLServer</li>
+                                <li>MySql</li>
+                                <li>Postgres</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>  
+            </ul>
+        </li>
+    </ul>    
+</div>
+-->
+    
